@@ -10,7 +10,7 @@
   <div class="container">
     <header class="app-header">
       <h1>📚 个人图书收藏管理系统</h1>
-      <p class="subtitle">云南大学 软件开发综合实践 自主实践应用</p>
+      <p class="subtitle">云南大学 软件开发综合实践 自主实践应用（含三大独立研究任务）</p>
     </header>
 
     <!-- 图书录入表单 -->
@@ -60,7 +60,7 @@
       </form>
     </section>
 
-    <!-- 检索与筛选工具栏 -->
+    <!-- 检索与工具栏（含独立研究任务按钮） -->
     <section class="card filter-section">
       <div class="filter-row">
         <div class="search-box">
@@ -76,12 +76,20 @@
           </select>
         </div>
       </div>
+      <!-- 独立研究任务功能区 -->
+      <div class="research-tools">
+        <span class="research-label">🔬 独立研究功能：</span>
+        <button type="button" class="btn btn-sm btn-outline" id="export-json-btn">📥 导出图书数据 (JSON)</button>
+        <button type="button" class="btn btn-sm btn-outline-warning" id="test-quota-btn">🧪 测试超量存储容错 (5MB限制)</button>
+      </div>
+      <!-- 存储容错异常提示区 -->
+      <div class="quota-warning" id="storage-tip"></div>
     </section>
 
-    <!-- 图书列表展示区 -->
+    <!-- 图书列表展示区（采用事件委托机制管理子元素） -->
     <section class="card list-section">
       <div class="list-header">
-        <h2>图书列表</h2>
+        <h2>图书列表 <span class="delegation-badge">⚡ 已启用事件委托</span></h2>
         <span class="count-badge" id="book-count">共 0 本</span>
       </div>
 

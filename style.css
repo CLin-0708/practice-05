@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-  max-width: 820px;
+  max-width: 840px;
   margin: 0 auto;
 }
 
@@ -103,14 +103,15 @@ input[type="text"]:focus, select:focus {
   margin-bottom: 8px;
 }
 
-/* 检索过滤工具栏 */
+/* 检索过滤与研究工具栏 */
 .filter-section {
-  padding: 16px 20px;
+  padding: 18px 20px;
 }
 
 .filter-row {
   display: flex;
   gap: 16px;
+  margin-bottom: 14px;
 }
 
 .search-box {
@@ -119,6 +120,36 @@ input[type="text"]:focus, select:focus {
 
 .category-filter {
   flex: 1;
+}
+
+.research-tools {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 1px dashed #e2e8f0;
+}
+
+.research-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.quota-warning {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #b45309;
+  background-color: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  padding: 6px 12px;
+  border-radius: 4px;
+  display: none;
+}
+
+.quota-warning.show {
+  display: block;
 }
 
 /* 按钮样式 */
@@ -150,9 +181,32 @@ input[type="text"]:focus, select:focus {
   border-radius: 5px;
 }
 
+.btn-outline {
+  background-color: #f8fafc;
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+}
+
+.btn-outline:hover {
+  background-color: #eff6ff;
+  border-color: #93c5fd;
+}
+
+.btn-outline-warning {
+  background-color: #fffbeb;
+  color: #d97706;
+  border: 1px solid #fde68a;
+}
+
+.btn-outline-warning:hover {
+  background-color: #fef3c7;
+  border-color: #fcd34d;
+}
+
 .btn-danger {
   background-color: #fee2e2;
   color: #dc2626;
+  border: 1px solid #fca5a5;
 }
 
 .btn-danger:hover {
@@ -188,6 +242,16 @@ input[type="text"]:focus, select:focus {
   color: #15803d;
 }
 
+.delegation-badge {
+  font-size: 12px;
+  font-weight: normal;
+  color: #059669;
+  background-color: #d1fae5;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  margin-left: 8px;
+}
+
 /* 列表展示区 */
 .list-header {
   display: flex;
@@ -197,6 +261,8 @@ input[type="text"]:focus, select:focus {
 }
 
 .list-header h2 {
+  display: flex;
+  align-items: center;
   border-bottom: none;
   padding-bottom: 0;
   margin-bottom: 0;
@@ -288,7 +354,7 @@ input[type="text"]:focus, select:focus {
   margin-left: 16px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .form-row, .filter-row {
     flex-direction: column;
     gap: 10px;
