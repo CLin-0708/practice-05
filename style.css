@@ -103,6 +103,24 @@ input[type="text"]:focus, select:focus {
   margin-bottom: 8px;
 }
 
+/* 检索过滤工具栏 */
+.filter-section {
+  padding: 16px 20px;
+}
+
+.filter-row {
+  display: flex;
+  gap: 16px;
+}
+
+.search-box {
+  flex: 2;
+}
+
+.category-filter {
+  flex: 1;
+}
+
 /* 按钮样式 */
 .btn {
   display: inline-flex;
@@ -127,9 +145,9 @@ input[type="text"]:focus, select:focus {
 }
 
 .btn-sm {
-  padding: 4px 10px;
-  font-size: 12px;
-  border-radius: 4px;
+  padding: 5px 12px;
+  font-size: 13px;
+  border-radius: 5px;
 }
 
 .btn-danger {
@@ -139,6 +157,35 @@ input[type="text"]:focus, select:focus {
 
 .btn-danger:hover {
   background-color: #fecaca;
+}
+
+.btn-status {
+  background-color: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+}
+
+.btn-status:hover {
+  background-color: #e2e8f0;
+}
+
+/* 状态徽章 */
+.status-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-left: 6px;
+}
+
+.status-reading {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.status-read {
+  background-color: #dcfce7;
+  color: #15803d;
 }
 
 /* 列表展示区 */
@@ -242,9 +289,9 @@ input[type="text"]:focus, select:focus {
 }
 
 @media (max-width: 600px) {
-  .form-row {
+  .form-row, .filter-row {
     flex-direction: column;
-    gap: 0;
+    gap: 10px;
   }
   .book-card {
     flex-direction: column;
